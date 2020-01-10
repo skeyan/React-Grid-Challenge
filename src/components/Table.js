@@ -8,32 +8,36 @@ class Table extends Component {
     super(props);
     this.state = {
       //Default Values:
-      numOfRows: 2,
-      numOfCols: 2,
+      numOfRows: 1,
+      numOfCols: 1,
       table: []
     };
   }
 
-  addARow = () => {
+  addRow = () => {
     let newRow = new Array(this.state.numOfCols).fill("gray");
     this.setState(
       {
-        table: [...this.state.table, newRow]
-      },
-      () => console.log(this.state.table)
+        table: [...this.state.table, newRow],
+        numOfRows: this.state.numOfRows + 1
+      }
+      // ,
+      // () => console.log("added row", this.state.numOfRows, this.state.table)
     );
   };
 
-  addACol = () => {
+  addCol = () => {
     let newTable = [...this.state.table];
     for (let i = 0; i < newTable.length; i++) {
       newTable[i].push("gray");
     }
     this.setState(
       {
-        table: newTable
-      },
-      () => console.log(this.state.table)
+        table: newTable,
+        numOfCols: this.state.numOfCols + 1
+      }
+      // ,
+      // () => console.log("added col", this.state.numOfCols, this.state.table)
     );
   };
 
@@ -46,11 +50,12 @@ class Table extends Component {
   };
 
   render() {
+    //console.log(this.state.table);
     return (
       <div>
         <div className="ButtonContainer">
-              <button onChange={this.props.addRow}>Add Row</button>
-              <button onChange={this.addCol}>Add Column</button>
+              <button onClick={this.addRow}>Add Row</button>
+              <button onClick={this.addCol}>Add Column</button>
               <select>
                 <option value="gray">Gray</option>
                 <option value="pink">Pink</option>
