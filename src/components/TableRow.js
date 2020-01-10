@@ -16,7 +16,11 @@ class TableRow extends Component {
         for(let i=0; i < this.state.numOfCells; i++){
             this.state.cells[i] = <TableCell />;
         }
-    }
+    };
+
+    addACell = () => {
+
+    };
     
     render() {
         // console.log(this.state.numOfCells);

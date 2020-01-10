@@ -16,8 +16,8 @@ class App extends Component {
     this.tableElement.current.addARow();
   };
 
-  addCol = () => {
-
+  handleCol = () => {
+    this.tableElement.current.addACol();
   };
   
   render() {
@@ -29,7 +29,7 @@ class App extends Component {
 
         <div className="ButtonContainer">
           <button onClick={this.handleRow}>Add Row</button>
-          <button onClick={this.addCol}>Add Column</button>
+          <button onClick={this.handleCol}>Add Column</button>
           <select>
             <option value="gray">Gray</option>
             <option value="pink">Pink</option>

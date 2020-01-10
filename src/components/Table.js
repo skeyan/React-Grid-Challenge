@@ -27,10 +27,21 @@ class Table extends Component {
         })    
         this.state.rows.push(<TableRow numOfCells={this.state.numOfCols}/>);
     }
+
+    addACol = () => {
+        this.setState({
+            numOfCols: this.state.numOfCols + 1
+        })    
+        console.log(this.state.numOfRows, this.state.numOfCols);
+        for(var i = 0; i < this.state.numOfRows.length; i++) {
+            console.log(this.state.numOfRows[i]);
+            this.state.numOfRows[i].numOfCells = this.state.numOfRows[i].numOfCells + 1;
+        }
+    }
     
     render() {
-        console.log(this.state.numOfRows);
-        console.log(this.state.rows);
+        console.log(this.state.numOfCols);
+        //console.log(this.state.rows);
         return (
             <div>
                 <table>
