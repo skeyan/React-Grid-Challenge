@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 // import TableCell from './TableCell.js';
-import TableRow from './TableRow.js'
+import TableRow from './TableRow.js';
 import './TableRow.css';
+import TableCell from './TableCell.js';
+
 
 class Table extends Component {
     constructor(props) {
@@ -23,23 +25,31 @@ class Table extends Component {
 
     addARow = () => {
         this.setState({
-            numOfRows: this.state.numOfRows + 1
+            numOfRows: this.state.numOfRows + 1,
+            rows: [...this.state.rows, <TableRow numOfCells={this.state.numOfCols}/>]
         })    
-        this.state.rows.push(<TableRow numOfCells={this.state.numOfCols}/>);
-    }
+        //this.state.rows.push(<TableRow numOfCells={this.state.numOfCols}/>);
+    };
 
     addACol = () => {
+        let temp = this.state.rows.map(el => {
+            el = <TableRow numOfCells={this.state.numOfCols + 1}/>;
+            return el
+        })
         this.setState({
-            numOfCols: this.state.numOfCols + 1
-        })    
-        console.log(this.state.numOfRows, this.state.numOfCols);
-        for(var i = 0; i < this.state.numOfRows.length; i++) {
-            console.log(this.state.numOfRows[i]);
-            this.state.numOfRows[i].numOfCells = this.state.numOfRows[i].numOfCells + 1;
-        }
-    }
+            numOfCols: this.state.numOfCols + 1,
+            rows: [...temp]
+        }, 
+        /*() => {
+            for(let i=0; i<this.state.numOfRows; i++){
+                this.state.rows[i] = 
+            }
+        }*/)    
+
+    };
     
     render() {
+        console.log(this.state.numOfRows);
         console.log(this.state.numOfCols);
         //console.log(this.state.rows);
         return (

@@ -19,13 +19,13 @@ class TableRow extends Component {
     };
 
     addACell = () => {
-
+        this.setState(
+            {numOfCells: this.state.numOfCells + 1}
+        )
+        this.state.cells.push(<TableCell />);
     };
     
     render() {
-        // console.log(this.state.numOfCells);
-        //console.log(this.state.cells);
-
         return( 
         	<tr>{this.state.cells}</tr>
         );
