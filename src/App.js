@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-// import TableRow from './components/TableRow.js';
+import TableRow from './components/TableRow.js';
 import Table from './components/Table.js'
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.tableElement = React.createRef();
     this.state = {
       selectedColor: "gray"
     };
   }
+
+  handleRow = () => {
+    this.tableElement.current.addARow();
+  };
+
+  addCol = () => {
+
+  };
   
   render() {
     return (
@@ -19,8 +28,8 @@ class App extends Component {
         </div>
 
         <div className="ButtonContainer">
-          <button onChange={this.props.addRow}>Add Row</button>
-          <button onChange={this.addCol}>Add Column</button>
+          <button onClick={this.handleRow}>Add Row</button>
+          <button onClick={this.addCol}>Add Column</button>
           <select>
             <option value="gray">Gray</option>
             <option value="pink">Pink</option>
@@ -30,7 +39,7 @@ class App extends Component {
         </div>
 
         <div className="TableContainer">
-          <Table/>
+          <Table ref={this.tableElement}/>
         </div>
       </div>
     );
