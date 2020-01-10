@@ -11,7 +11,7 @@ class TableCell extends Component {
     }
 
     render() {
-        return (<td></td>)
+        return (<td id={this.props.color}></td>)
     }
 }
 

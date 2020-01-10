@@ -27,18 +27,19 @@ class Table extends Component {
   };
 
   addCol = () => {
-    let newTable = [...this.state.table];
-    for (let i = 0; i < newTable.length; i++) {
-      newTable[i].push("gray");
+    if(this.state.numOfRows > 1) {
+        let newTable = [...this.state.table];
+        for (let i = 0; i < newTable.length; i++) {
+          newTable[i].push("gray");
+        }
+        this.setState(
+          {
+            table: newTable,
+            numOfCols: this.state.numOfCols + 1
+          }
+        );  
     }
-    this.setState(
-      {
-        table: newTable,
-        numOfCols: this.state.numOfCols + 1
-      }
-      // ,
-      // () => console.log("added col", this.state.numOfCols, this.state.table)
-    );
+    
   };
 
   renderTableContents = () => {
