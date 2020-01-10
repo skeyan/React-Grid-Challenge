@@ -6,10 +6,12 @@ import Table from './components/Table.js'
 function App() {
   return (
     <div className="App">
-      {/* <table>
-        <TableRow/>
-      </table> */}
-      <Table/>
+      <div className="App-Header">
+        <h1>React Grid Challenge</h1>    
+      </div>
+      <div className="TableContainer">
+        <Table/>
+      </div>
     </div>
   );
 }
