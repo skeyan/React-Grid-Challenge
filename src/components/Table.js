@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TableRow from "./TableRow.js";
 import "./TableRow.css";
 import TableCell from "./TableCell.js";
+import "./Table.css";
 
 class Table extends Component {
   constructor(props) {
@@ -70,10 +71,12 @@ class Table extends Component {
                 <option value="blue">Blue</option>
                 <option value="purple">Purple</option>
               </select>
+        </div>{"\n"}
+        <div className="container">
+            <table>
+              <tbody>{this.renderTableContents()}</tbody>
+            </table>
         </div>
-        <table>
-          <tbody>{this.renderTableContents()}</tbody>
-        </table>
       </div>
     );
   }
