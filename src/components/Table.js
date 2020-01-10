@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-// import TableCell from './TableCell.js';
 import TableRow from "./TableRow.js";
 import "./TableRow.css";
 import TableCell from "./TableCell.js";
-​
+
 class Table extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +13,7 @@ class Table extends Component {
       table: []
     };
   }
-​
+
   addARow = () => {
     let newRow = new Array(this.state.numOfCols).fill("gray");
     this.setState(
@@ -24,7 +23,7 @@ class Table extends Component {
       () => console.log(this.state.table)
     );
   };
-​
+
   addACol = () => {
     let newTable = [...this.state.table];
     for (let i = 0; i < newTable.length; i++) {
@@ -37,7 +36,7 @@ class Table extends Component {
       () => console.log(this.state.table)
     );
   };
-​
+
   renderTableContents = () => {
     if (this.state.table.length > 0) {
       return this.state.table.map(row => <TableRow row={row} />);
@@ -45,10 +44,20 @@ class Table extends Component {
       return null;
     }
   };
-​
+
   render() {
     return (
       <div>
+        <div className="ButtonContainer">
+              <button onChange={this.props.addRow}>Add Row</button>
+              <button onChange={this.addCol}>Add Column</button>
+              <select>
+                <option value="gray">Gray</option>
+                <option value="pink">Pink</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+              </select>
+        </div>
         <table>
           <tbody>{this.renderTableContents()}</tbody>
         </table>
@@ -56,5 +65,5 @@ class Table extends Component {
     );
   }
 }
-​
+
 export default Table;
