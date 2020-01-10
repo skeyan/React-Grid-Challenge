@@ -1,51 +1,60 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import TableCell from './TableCell.js';
-import TableRow from './TableRow.js'
-import './TableRow.css';
-import App from '../App.js';
-
+import TableRow from "./TableRow.js";
+import "./TableRow.css";
+import TableCell from "./TableCell.js";
+​
 class Table extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            //Default Values:
-            numOfRows: 2,
-            numOfCols: 2,
-            rows: []
-        }
-        this.populateRows();
-    }
-
-    addRow = () => {
-        this.setState({
-            numOfRows: this.state.numOfRows + 1
-        })    
-        this.state.rows[this.state.numOfRows-1] = <TableRow/>
+  constructor(props) {
+    super(props);
+    this.state = {
+      //Default Values:
+      numOfRows: 2,
+      numOfCols: 2,
+      table: []
     };
-
-    addCol = () => {
-
-    };
-
-    populateRows = () => {
-        for(let i=0; i < this.state.numOfRows; i++){
-            this.state.rows[i] = <TableRow numOfCells={this.state.numOfCols}/>;
-        }
+  }
+​
+  addARow = () => {
+    let newRow = new Array(this.state.numOfCols).fill("gray");
+    this.setState(
+      {
+        table: [...this.state.table, newRow]
+      },
+      () => console.log(this.state.table)
+    );
+  };
+​
+  addACol = () => {
+    let newTable = [...this.state.table];
+    for (let i = 0; i < newTable.length; i++) {
+      newTable[i].push("gray");
     }
-    
-    render() {
-        console.log(this.state.rows);
-        return (
-            <div>
-                <table>
-                    <tbody>
-                        {this.state.rows}
-                    </tbody>
-                </table> 
-                <App someprop={this.addRow}/>
-            </div>    
-        );   
+    this.setState(
+      {
+        table: newTable
+      },
+      () => console.log(this.state.table)
+    );
+  };
+​
+  renderTableContents = () => {
+    if (this.state.table.length > 0) {
+      return this.state.table.map(row => <TableRow row={row} />);
+    } else {
+      return null;
     }
+  };
+​
+  render() {
+    return (
+      <div>
+        <table>
+          <tbody>{this.renderTableContents()}</tbody>
+        </table>
+      </div>
+    );
+  }
 }
-
+​
 export default Table;
