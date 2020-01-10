@@ -1,21 +1,21 @@
 td {
-	border: 0.05px solid black;
+	border: 0.05px solid #999;
     width: 50px;
     height: 50px;
 }
 
 td#gray {
-	background: gray;
+	background: silver;
 }
 
 td#pink {
-	background: pink;
+	background: Salmon;
 }
 
 td#blue {
-	background: blue;
+	background: MediumTurquoise;
 }
 
 td#purple {
-	background: purple;
+	background: Plum;
 }

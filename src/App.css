@@ -3,7 +3,8 @@
 }
 
 .App-Header {
-  background-color: #222;
+  background-color: Salmon;
+  text-shadow: 2px 2px black;
   color: white;
   font-size: 1.25rem;
   margin-bottom: 20px;
@@ -16,12 +17,4 @@
 
 button {
   margin-right: 10px;
-}
-
-.TableContainer {
-  text-align: center;
-}
-
-.Table {
-  text-align: center;
 }
