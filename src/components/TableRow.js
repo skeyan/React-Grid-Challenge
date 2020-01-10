@@ -9,7 +9,7 @@ class TableRow extends Component {
             numOfCells: props.numOfCells,
             cells: []
         }
-        this.populateArray()
+        this.populateArray();
     }
 
     populateArray = () => {
@@ -20,11 +20,9 @@ class TableRow extends Component {
     
     render() {
         // console.log(this.state.numOfCells);
+        //console.log(this.state.cells);
         
-        console.log(this.state.cells);
-
         return <tr>{this.state.cells}</tr>
-
         
     }
 }

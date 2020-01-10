@@ -7,17 +7,29 @@ class Table extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            placeholder: 0,
+            //Default Values:
+            numOfRows: 2,
+            numOfCols: 2,
+            rows: []
         }
+        this.populateRows();
     }
 
+    populateRows = () => {
+        for(let i=0; i < this.state.numOfRows; i++){
+            this.state.rows[i] = <TableRow numOfCells={this.state.numOfCols}/>;
+        }
+    }
     
     render() {
-        return <table>
-            <tbody>
-                <TableRow numOfCells={10}/>
-            </tbody>
-        </table>        
+        console.log(this.state.rows);
+        return (
+            <table>
+                <tbody>
+                    {this.state.rows}
+                </tbody>
+            </table>     
+        );   
     }
 }
 
