@@ -10,10 +10,11 @@ class TableRow extends Component {
 
 //Takes in 1 row list of TableRows and must render TableCells from them
   renderRowContent = () => {
-  	console.log(this.props.row.length);
+
   	let thisRow = [];
   	for(let i = 0; i < this.props.row.length; i++) {
-  		thisRow.push(<TableCell />);
+  		console.log(this.props.row[i]);
+  		thisRow.push(<TableCell color={this.props.row[i]}/>);
   	}
   	return thisRow;
   };
