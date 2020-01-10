@@ -7,11 +7,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      selectedColor: "gray"
     };
   }
   
-  
+  addRow = () => {
+    
+  };
+
+  addCol = () => {
+
+  };
 
   render() {
     return (
@@ -21,8 +27,8 @@ class App extends Component {
         </div>
 
         <div className="ButtonContainer">
-          <button>Add Row</button>
-          <button>Add Column</button>
+          <button onChange={this.addRow}>Add Row</button>
+          <button onChange={this.addCol}>Add Column</button>
           <select>
             <option value="gray">Gray</option>
             <option value="pink">Pink</option>
