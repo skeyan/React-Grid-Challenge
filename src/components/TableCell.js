@@ -5,13 +5,22 @@ class TableCell extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            color: "",
+            color: this.props.color,
             hasColor: false
         }
     }
 
+    setColor = () => {
+        this.setState({
+            //color: "pink",
+            color: this.props.mouseColor,
+            hasColor: true
+        });
+    }
+
     render() {
-        return (<td></td>)
+        console.log(this.props.color);
+        return (<td onClick={this.setColor} id={this.state.color}></td>)
     }
 }
 

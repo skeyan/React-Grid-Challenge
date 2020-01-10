@@ -10,7 +10,8 @@ class Table extends Component {
       //Default Values:
       numOfRows: 1,
       numOfCols: 1,
-      table: []
+      table: [],
+      mouseColor: "gray"
     };
   }
 
@@ -27,27 +28,34 @@ class Table extends Component {
   };
 
   addCol = () => {
-    let newTable = [...this.state.table];
-    for (let i = 0; i < newTable.length; i++) {
-      newTable[i].push("gray");
+    if(this.state.numOfRows > 1) { //doesn't allow you to add columns when there's no rows
+        let newTable = [...this.state.table];
+        for (let i = 0; i < newTable.length; i++) {
+          newTable[i].push("gray");
+        }
+        this.setState(
+          {
+            table: newTable,
+            numOfCols: this.state.numOfCols + 1
+          }
+        );  
     }
-    this.setState(
-      {
-        table: newTable,
-        numOfCols: this.state.numOfCols + 1
-      }
-      // ,
-      // () => console.log("added col", this.state.numOfCols, this.state.table)
-    );
+    
   };
 
   renderTableContents = () => {
     if (this.state.table.length > 0) {
-      return this.state.table.map(row => <TableRow row={row} />);
+      return this.state.table.map(row => <TableRow mouseColor={this.state.mouseColor} row={row} />);
     } else {
       return null;
     }
   };
+
+  setSelectedColor = (event) => {
+    this.setState({
+        mouseColor: event.target.value
+    });
+  }
 
   render() {
     //console.log(this.state.table);
@@ -56,7 +64,7 @@ class Table extends Component {
         <div className="ButtonContainer">
               <button onClick={this.addRow}>Add Row</button>
               <button onClick={this.addCol}>Add Column</button>
-              <select>
+              <select onChange={this.setSelectedColor}>
                 <option value="gray">Gray</option>
                 <option value="pink">Pink</option>
                 <option value="blue">Blue</option>
