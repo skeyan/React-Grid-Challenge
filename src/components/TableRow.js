@@ -21,8 +21,10 @@ class TableRow extends Component {
     render() {
         // console.log(this.state.numOfCells);
         //console.log(this.state.cells);
-        
-        return <tr>{this.state.cells}</tr>
+
+        return( 
+        	<tr>{this.state.cells}</tr>
+        );
         
     }
 }

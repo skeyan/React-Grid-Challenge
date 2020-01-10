@@ -11,14 +11,6 @@ class App extends Component {
     };
   }
   
-  addRow = () => {
-    
-  };
-
-  addCol = () => {
-
-  };
-
   render() {
     return (
       <div className="App">
@@ -27,7 +19,7 @@ class App extends Component {
         </div>
 
         <div className="ButtonContainer">
-          <button onChange={this.addRow}>Add Row</button>
+          <button onChange={this.props.addRow}>Add Row</button>
           <button onChange={this.addCol}>Add Column</button>
           <select>
             <option value="gray">Gray</option>
