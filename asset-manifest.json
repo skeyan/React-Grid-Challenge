@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/gridchallenge/static/css/main.7b30b116.chunk.css",
-    "main.js": "/gridchallenge/static/js/main.122cb5c9.chunk.js",
-    "main.js.map": "/gridchallenge/static/js/main.122cb5c9.chunk.js.map",
-    "runtime-main.js": "/gridchallenge/static/js/runtime-main.d68ee85d.js",
-    "runtime-main.js.map": "/gridchallenge/static/js/runtime-main.d68ee85d.js.map",
-    "static/js/2.4ea500c3.chunk.js": "/gridchallenge/static/js/2.4ea500c3.chunk.js",
-    "static/js/2.4ea500c3.chunk.js.map": "/gridchallenge/static/js/2.4ea500c3.chunk.js.map",
-    "index.html": "/gridchallenge/index.html",
-    "precache-manifest.0c02a1e9a5991457168f469a0d70ea8c.js": "/gridchallenge/precache-manifest.0c02a1e9a5991457168f469a0d70ea8c.js",
-    "service-worker.js": "/gridchallenge/service-worker.js",
-    "static/css/main.7b30b116.chunk.css.map": "/gridchallenge/static/css/main.7b30b116.chunk.css.map",
-    "static/js/2.4ea500c3.chunk.js.LICENSE": "/gridchallenge/static/js/2.4ea500c3.chunk.js.LICENSE"
+    "main.css": "/React-Grid-Challenge/static/css/main.7b30b116.chunk.css",
+    "main.js": "/React-Grid-Challenge/static/js/main.eacd280b.chunk.js",
+    "main.js.map": "/React-Grid-Challenge/static/js/main.eacd280b.chunk.js.map",
+    "runtime-main.js": "/React-Grid-Challenge/static/js/runtime-main.4b1b24fc.js",
+    "runtime-main.js.map": "/React-Grid-Challenge/static/js/runtime-main.4b1b24fc.js.map",
+    "static/js/2.4ea500c3.chunk.js": "/React-Grid-Challenge/static/js/2.4ea500c3.chunk.js",
+    "static/js/2.4ea500c3.chunk.js.map": "/React-Grid-Challenge/static/js/2.4ea500c3.chunk.js.map",
+    "index.html": "/React-Grid-Challenge/index.html",
+    "precache-manifest.33aeb7d3087b84dedfb773bcbf1a2840.js": "/React-Grid-Challenge/precache-manifest.33aeb7d3087b84dedfb773bcbf1a2840.js",
+    "service-worker.js": "/React-Grid-Challenge/service-worker.js",
+    "static/css/main.7b30b116.chunk.css.map": "/React-Grid-Challenge/static/css/main.7b30b116.chunk.css.map",
+    "static/js/2.4ea500c3.chunk.js.LICENSE": "/React-Grid-Challenge/static/js/2.4ea500c3.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.d68ee85d.js",
+    "static/js/runtime-main.4b1b24fc.js",
     "static/js/2.4ea500c3.chunk.js",
     "static/css/main.7b30b116.chunk.css",
-    "static/js/main.122cb5c9.chunk.js"
+    "static/js/main.eacd280b.chunk.js"
   ]
 }
