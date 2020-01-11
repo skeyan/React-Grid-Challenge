@@ -68,5 +68,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ## React Grid Challenge
-Collaborators: Camryn Buonamassa, Eva Yan, and David Yuen
-Advisee: Tony Fung
+Collaborators: Camryn Buonamassa, Eva Yan, and David Yuen<br />
+Advisor: Tony Fung
