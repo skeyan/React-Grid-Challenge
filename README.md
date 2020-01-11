@@ -69,3 +69,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## React Grid Challenge
 Collaborators: Camryn Buonamassa, Eva Yan, and David Yuen
+Advisee: Tony Fung
